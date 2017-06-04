@@ -23,6 +23,9 @@ Well, I only have a Windows, So I cannot debug or fix errors on how this would w
 Nope. The password is the *key* you used to encrypt your file, and that *key* is the only thing that can decrypt it.
 
 
+* **Where can I directly download the executable for this?**  
+You can download the setup from the [releases](https://github.com/TheVexatious/Cryzmo/releases).
+
 #### TODO
 * Better HTML Layout
 * Add pictures to README
