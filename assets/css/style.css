@@ -1,0 +1,109 @@
+body {
+  background-color: #262626;
+  font-family: Arial
+}
+
+#title {
+  font-size: 60px;
+  text-align: center;
+  -webkit-text-fill-color: #b30000; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 1em 0;
+    padding: 0;
+}
+
+button {
+  color: white;
+  background-color: black;
+  border: 1px black;
+  transition: 0.3s;
+  padding: 5px;
+}
+
+.tablink {
+  color: white;
+  background-color: black;
+  border: 1px black;
+  transition: 0.3s;
+  padding: 25px;
+  margin: 15px;
+}
+
+.tablink.active {
+  color: black;
+  background-color: white;
+  border: 1px white;
+}
+
+#fakeBrowse {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.tabcontent {
+  display: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+input[type="button"] {
+  outline: 0;
+  cursor: pointer;
+}
+
+div.tabs button:hover:not(.active) {
+  background-color: #1e1e1e;
+  border: 1px #1e1e1e;
+}
+
+div.tabs button:hover {
+  cursor: pointer;
+}
+
+span {
+  color: white;
+}
+
+#wrapper {
+  margin-left: 50px;
+}
+
+#sEnc {
+  padding: 10px;
+}
+
+#sDec {
+  padding: 10px;
+}
+
+#ewarning {
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-text-fill-color: #b70000; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+#dwarning {
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-text-fill-color: #b70000; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+#pgen {
+  cursor: pointer;
+}

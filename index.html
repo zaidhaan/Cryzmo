@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>First App</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </head>
+  <body>
+    <script>
+    const {ipcRenderer} = require("electron");
+    const data = ipcRenderer.sendSync("file-data");
+    document.write("Hello from javascript!\n");
+    document.write(data ? "You are running from a file extension" : "You are running from the executable");
+    </script>
+    <h1 id="title">Cryzmo</h1>
+    <hr>
+    <center>
+      <div class="tabs">
+        <button id="encl" class="tablink" onclick="openTab(event, 'encrypt')">Encrypt</button>
+        <button id="decl" class="tablink" onclick="openTab(event, 'decrypt')">Decrypt</button>
+      </div>
+    </center>
+    <br>
+    <div id="wrapper">
+      <div id="encrypt" class="tabcontent">
+        <span>Enter the full file path: </span><input type="text" id="filename"/>
+        <br /><br />
+        <span>Enter a password: </span>
+        <input type="text" id="epass"/>
+        <span>or <u id="pgen" onclick="genPass()">Generate a Password</u></span>
+        <br /><br />
+        <span style="color:grey"><u>NOTE:</u> As for now all the encrypted/decrypted files will be stored in the root folder of the selected file to be encrypted/decrypted</span>
+        <br /><br />
+        <button id="sEnc" onclick="startEncryption()">Encrypt</button>
+        <br /><br />
+        <span id="ewarning"></span>
+      </div>
+      <div id="decrypt" class="tabcontent">
+        <span>Enter the full file path: </span><input type="text" id="dfilename"/>
+        <br /><br />
+        <span>Enter a password: </span>
+        <input type="text" id="dpass"/>
+        <br /><br />
+        <span style="color:grey"><u>NOTE:</u> As for now all the encrypted/decrypted files will be stored in the root folder of the selected file to be encrypted/decrypted</span>
+        <br /><br />
+        <button id="sDec" onclick="startDecryption()">Decrypt</button>
+        <br /><br />
+        <span id="dwarning"></span>
+      </div>
+    </div>
+    <script>
+      document.getElementById("encl").click();
+    </script>
+  </body>
+</html>

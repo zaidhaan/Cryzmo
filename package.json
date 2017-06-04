@@ -1,0 +1,19 @@
+{
+  "name": "cryzmo",
+  "productName": "Cryzmo",
+  "description": "Simple password-protected file encrypter",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "author": "Vex <zaidhanhussain@gmai.com>",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/icons/icon.ico --prune=true --out=release",
+    "build": "node installers/windows.js"
+  },
+  "devDependencies": {
+    "electron": "^1.4.5",
+    "electron-packager": "^8.1.0",
+    "electron-winstaller": "^2.4.1"
+  }
+}
