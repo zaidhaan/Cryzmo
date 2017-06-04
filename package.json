@@ -8,7 +8,7 @@
   "author": "Vex <zaidhanhussain@gmai.com>",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/icons/icon.ico --prune=true --out=release",
+    "package": "electron-packager . --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/icons/icon.ico --prune=true --out=release --win32metadata.CompanyName=\"Vex\" --win32metadata.FileDescription=\"Simple password-protected file encrypter\" --win32metadata.ProductName=\"Cryzmo\"",
     "build": "node installers/windows.js"
   },
   "devDependencies": {
