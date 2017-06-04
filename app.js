@@ -6,14 +6,18 @@ const fs = require("fs");
 let win;
 
 ipcMain.on("file-data", (event) => {
-  let data = null;
-  if (process.platform == "win32" && process.argv.length >= 2) {
-    const openFilePath = process.argv[1];
-    if(fs.lstatSync(openFilePath).isFile()){
-      data = fs.readFileSync(openFilePath, "utf-8");
+  try{
+    let data = null;
+    if (process.platform == "win32" && process.argv.length >= 2) {
+      const openFilePath = process.argv[1];
+      if(fs.lstatSync(openFilePath).isFile()){
+        data = fs.readFileSync(openFilePath, "utf-8");
+      }
     }
+    event.returnValue = data;
+  }catch(e){
+    event.returnValue = null;
   }
-  event.returnValue = data;
 });
 
 function createWindow () {
