@@ -1,3 +1,7 @@
+if(require("./installers/setupEvents.js")){
+  return;
+}
+
 const {app, ipcMain, BrowserWindow} = require("electron");
 const path = require("path");
 const url = require("url");

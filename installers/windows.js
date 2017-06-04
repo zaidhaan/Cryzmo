@@ -1,5 +1,6 @@
 const {createWindowsInstaller} = require("electron-winstaller");
 const {resolve, join} = require("path");
+const url = require("url");
 const settings = {
   appDirectory: resolve(join("release", "Cryzmo-win32-x64")),
   authors: "Vex",
@@ -7,8 +8,9 @@ const settings = {
   outputDirectory: resolve(join("release", "windows")),
   exe: "Cryzmo.exe",
   setupExe: "CryzmoSetup.exe",
-  setupIcon: resolve(join("assets", "icons", "icon.ico"))
-};
+  setupIcon: resolve(join("assets", "icons", "icon.ico")),
+  iconUrl: url.format({pathname: resolve(join("assets", "icons", "icon.ico")), protocol: "file:", slashes: true})
+}
 
 console.log("Creating Windows Installer...");
 
