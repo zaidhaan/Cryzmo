@@ -2,7 +2,7 @@
   "name": "cryzmo",
   "productName": "Cryzmo",
   "description": "Simple password-protected file encrypter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "app.js",
   "license": "MIT",
   "author": "Vex <zaidhanhussain@gmai.com>",
