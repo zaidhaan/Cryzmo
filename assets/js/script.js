@@ -87,3 +87,9 @@ function beginDecryption(data, pass){
     confirm(`Decrypted file written to ${outpath}`);
   });
 }
+
+process.on("uncaughtException", e => {
+  if(e.message.includes("EVP_DecryptFinal_ex:wrong final block length")){ // Not very effective but I don't see any other ways around it.
+    alert("Could not decrypt file! Please ensure you have written the correct password!");
+  }
+});
