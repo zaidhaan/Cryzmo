@@ -1,6 +1,12 @@
 body {
   background-color: #262626;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
   font-family: Arial
+}
+
+h1:hover, p:hover, span:hover {
+  cursor: default;
 }
 
 #title {
